@@ -1,3 +1,4 @@
+import 'package:azeala_hotel/Pages/auth/signin.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen4 extends StatelessWidget {
@@ -21,7 +22,12 @@ class SplashScreen4 extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 285.0, bottom: 40),
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignIn()),
+                      );
+                    },
                     child: const Text(
                       "Sign Up",
                       style:
