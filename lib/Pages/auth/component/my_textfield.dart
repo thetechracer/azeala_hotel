@@ -21,14 +21,14 @@ class MyTextfield extends StatelessWidget {
           obscureText: obscureText,
           decoration: InputDecoration(
               enabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.white),
+                borderSide: BorderSide(color: Colors.grey),
               ),
               focusedBorder: const OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.green)),
-              fillColor: Colors.grey,
+              fillColor: Colors.grey.shade100,
               filled: true,
               hintText: hintText,
-              hintStyle: TextStyle(color: Colors.grey.shade700)),
+              hintStyle: TextStyle(color: Colors.grey.shade700, fontSize: 16)),
         ));
   }
 }
