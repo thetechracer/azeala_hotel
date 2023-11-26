@@ -34,6 +34,7 @@ class SignIn extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     //logo
                     const SizedBox(
