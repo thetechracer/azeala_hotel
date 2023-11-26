@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,16 +49,6 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB6j12NMYbVkjqY1Mb-cLfQCUmVpS8BiN8',
-    appId: '1:282510917269:web:d684c953dc84c3c641e59c',
-    messagingSenderId: '282510917269',
-    projectId: 'azeala-hotel',
-    authDomain: 'azeala-hotel.firebaseapp.com',
-    storageBucket: 'azeala-hotel.appspot.com',
-    measurementId: 'G-F78P2DB3JH',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBGi9G6TxVdfZqbXHDQr7WwUafwn1MzavA',
     appId: '1:282510917269:android:9e7337e3c7b07f2c41e59c',
@@ -68,14 +64,5 @@ class DefaultFirebaseOptions {
     projectId: 'azeala-hotel',
     storageBucket: 'azeala-hotel.appspot.com',
     iosBundleId: 'com.example.azealaHotel',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBDH2L2_TM1wlKXvHFFH0R82r3_FKpo1d0',
-    appId: '1:282510917269:ios:ce98dbb029451bc841e59c',
-    messagingSenderId: '282510917269',
-    projectId: 'azeala-hotel',
-    storageBucket: 'azeala-hotel.appspot.com',
-    iosBundleId: 'com.example.azealaHotel.RunnerTests',
   );
 }
