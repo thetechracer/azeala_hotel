@@ -2,16 +2,22 @@ import 'package:azeala_hotel/Pages/Splash%20Screens/splashscreen3.dart';
 import 'package:azeala_hotel/Pages/auth/component/my_textfield.dart';
 import 'package:azeala_hotel/Pages/auth/component/mybutton.dart';
 import 'package:azeala_hotel/Pages/auth/component/squaretile.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {
   //Sign User In
-  void signUserIn() {}
+  void signUserIn() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailcontroller.text, password: passwordcontroller.text);
+  }
+
   SignIn({super.key});
 
 // controller for the text
 
-  final usercontroller = TextEditingController();
+  final emailcontroller = TextEditingController();
   final passwordcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -75,8 +81,8 @@ class SignIn extends StatelessWidget {
                     ),
                     //username textfield
                     MyTextfield(
-                      controller: usercontroller,
-                      hintText: 'Username',
+                      controller: emailcontroller,
+                      hintText: 'Email',
                       obscureText: false,
                     ),
 

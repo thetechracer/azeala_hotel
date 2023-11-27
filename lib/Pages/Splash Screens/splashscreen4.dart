@@ -1,3 +1,4 @@
+import 'package:azeala_hotel/Pages/auth/auth_page.dart';
 import 'package:azeala_hotel/Pages/auth/signin.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,7 @@ class SplashScreen4 extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SignIn()),
+                        MaterialPageRoute(builder: (context) => AuthPage()),
                       );
                     },
                     child: const Text(
