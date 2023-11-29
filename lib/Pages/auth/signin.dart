@@ -40,6 +40,7 @@ class _SignInState extends State<SignIn> {
         wrongPasswordMessage();
       }
     }
+    Navigator.pop(context);
   }
 
   //For wrong email
