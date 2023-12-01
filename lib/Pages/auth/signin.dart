@@ -110,13 +110,13 @@ class _SignInState extends State<SignIn> {
                     const Text(
                       "Welcome to Alojna Hotel ",
                       style: TextStyle(
-                          fontSize: 22,
+                          fontSize: 23,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                     ),
 
                     const SizedBox(
-                      height: 10,
+                      height: 12,
                     ),
                     const Text(
                       "Kindly Sign In to enjoy our services.",
