@@ -166,7 +166,7 @@ class _SignInState extends State<SignIn> {
 
                     //sign In button
                     const SizedBox(
-                      height: 15,
+                      height: 16,
                     ),
 
                     MyButton(
@@ -175,7 +175,7 @@ class _SignInState extends State<SignIn> {
                     ),
 
                     const SizedBox(
-                      height: 30,
+                      height: 31,
                     ),
 
                     //or with
