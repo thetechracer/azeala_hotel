@@ -169,7 +169,12 @@ class _SignUpState extends State<SignUp> {
                         padding: EdgeInsets.only(top: 10, right: 30.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[Text("Forgot Password ?")],
+                          children: <Widget>[
+                            Text(
+                              "Forgot Password ?",
+                              style: TextStyle(color: Colors.white),
+                            )
+                          ],
                         ),
                       ),
                     ),
@@ -181,7 +186,7 @@ class _SignUpState extends State<SignUp> {
 
                     MyButton(
                       onTap: signUserUp,
-                      signInText: ("Sign In"),
+                      signInText: ("Sign Up"),
                     ),
 
                     const SizedBox(
