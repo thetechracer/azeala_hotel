@@ -12,14 +12,18 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        actions: [IconButton(onPressed: signUserOut, icon: Icon(Icons.logout))],
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          actions: [
+            IconButton(onPressed: signUserOut, icon: Icon(Icons.logout))
+          ],
+        ),
+        body: Center(
+            child: Text(
+          "HOLA !!! You have logged In successfully" + user.email!,
+        )),
       ),
-      body: Center(
-          child: Text(
-        "HOLA !!! You have logged In successfully" + user.email!,
-      )),
     );
   }
 }

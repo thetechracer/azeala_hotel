@@ -7,7 +7,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
-  SignIn({super.key});
+  void Function()? onTap;
+  SignIn({super.key, required this.onTap, required});
 
   @override
   State<SignIn> createState() => _SignInState();
@@ -40,7 +41,6 @@ class _SignInState extends State<SignIn> {
         wrongPasswordMessage();
       }
     }
-    Navigator.pop(context);
   }
 
   //For wrong email
@@ -237,7 +237,7 @@ class _SignInState extends State<SignIn> {
                           width: 4,
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: widget.onTap,
                           child: const Text(
                             " Register Now",
                             style: TextStyle(

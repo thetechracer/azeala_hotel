@@ -1,3 +1,5 @@
+import 'package:azeala_hotel/Pages/Splash%20Screens/splashscreen2.dart';
+import 'package:azeala_hotel/Pages/auth/SignInorsignupPage.dart';
 import 'package:azeala_hotel/Pages/auth/signin.dart';
 import 'package:azeala_hotel/Pages/home/home_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -20,7 +22,7 @@ class AuthPage extends StatelessWidget {
           // if the user is not login In
 
           else {
-            return SignIn();
+            return SigninorsignupPage();
           }
         },
       ),
