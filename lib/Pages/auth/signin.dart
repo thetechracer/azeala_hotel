@@ -159,7 +159,12 @@ class _SignInState extends State<SignIn> {
                         padding: EdgeInsets.only(top: 10, right: 30.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[Text("Forgot Password ?")],
+                          children: <Widget>[
+                            Text(
+                              "Forgot Password ?",
+                              style: TextStyle(color: Colors.white),
+                            )
+                          ],
                         ),
                       ),
                     ),
