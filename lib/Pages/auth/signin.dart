@@ -2,6 +2,7 @@ import 'package:azeala_hotel/Pages/Splash%20Screens/splashscreen3.dart';
 import 'package:azeala_hotel/Pages/auth/component/my_textfield.dart';
 import 'package:azeala_hotel/Pages/auth/component/mybutton.dart';
 import 'package:azeala_hotel/Pages/auth/component/squaretile.dart';
+import 'package:azeala_hotel/Pages/services/auth_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -215,14 +216,18 @@ class _SignInState extends State<SignIn> {
 
                     //google or apple
 
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        SquareTile(imagePath: "images/googlelogo.png"),
+                        SquareTile(
+                          onTap: () => AuthService().signInwithGoogle(),
+                          imagePath: "images/googlelogo.png",
+                        ),
                         SizedBox(
                           width: 10,
                         ),
-                        SquareTile(imagePath: "images/applelogo.png")
+                        SquareTile(
+                            onTap: () {}, imagePath: "images/applelogo.png")
                       ],
                     ),
 
