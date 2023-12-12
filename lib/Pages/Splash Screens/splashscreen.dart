@@ -2,6 +2,7 @@ import 'package:azeala_hotel/Pages/Splash%20Screens/splashcreen1.dart';
 import 'package:azeala_hotel/Pages/Splash%20Screens/splashscreen2.dart';
 import 'package:azeala_hotel/Pages/Splash%20Screens/splashscreen3.dart';
 import 'package:azeala_hotel/Pages/Splash%20Screens/splashscreen4.dart';
+
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
