@@ -142,7 +142,7 @@ class _SignInState extends State<SignIn> {
                     // password textfield
                     MyTextfield(
                       controller: passwordcontroller,
-                      hintText: 'Password',
+                      hintText: 'Enter your password',
                       obscureText: true,
                     ),
 

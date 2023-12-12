@@ -28,8 +28,15 @@ class _SignUpState extends State<SignUp> {
       },
     );
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-          email: emailcontroller.text, password: passwordcontroller.text);
+      if (passwordcontroller.text == confirmPasswordController.text) {
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: emailcontroller.text,
+          password: passwordcontroller.text,
+        );
+      } else {
+        //show the error message
+        SnackBar(content: Text("Password don't match"));
+      }
       // pop the loading circle
 
       Navigator.pop(context);
@@ -68,6 +75,8 @@ class _SignUpState extends State<SignUp> {
   final emailcontroller = TextEditingController();
 
   final passwordcontroller = TextEditingController();
+
+  final confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -151,7 +160,7 @@ class _SignUpState extends State<SignUp> {
                     ),
                     // confirm password textfield
                     MyTextfield(
-                      controller: passwordcontroller,
+                      controller: confirmPasswordController,
                       hintText: 'Confirm Password',
                       obscureText: true,
                     ),
